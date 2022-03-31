@@ -16,7 +16,7 @@ try:
         # Do basic steps for server like create, bind and listening on the socket
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         port=5000
-        server_socket.bind(("192.168.94.1", port))
+        server_socket.bind(("192.168.38.1", port))
         server_socket.listen(10)
 
         # Add server socket to the list of readable connections
@@ -90,7 +90,7 @@ try:
                         sock=CONNECTION_LIST[1]
                         win="You won the item at price: "+str(bprice)
                         sock.send(win.encode())
-                        time.sleep(2)
+                        time.sleep(5)
                         sock.close()
                         CONNECTION_LIST.remove(sock)
                         flag2=False                

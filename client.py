@@ -34,14 +34,14 @@ def send_data():
 if __name__ == "__main__":
 
     print("AUCTIONING SYSTEM")
-    print("Connecting to server at 192.168.94.1:5000")
+    print("Connecting to server at 192.168.38.188:5000")
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client_socket.connect(('192.168.94.1', 5000))
+    client_socket.connect(('192.168.38.188', 5000))
     intro=client_socket.recv(1024)
     print (intro.decode())
     intro1 = client_socket.recv(1024)
     print(intro1.decode())
-    print("Connected to server at 192.168.94.1:5000")
+    print("Connected to server at 192.168.38.188:5000")
     print("Enter your bids(q or Q to quit):")
 
     _thread.start_new_thread(recv_data,())
